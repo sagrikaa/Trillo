@@ -4,6 +4,7 @@
     margin-left: 3rem;
 }
 
+/*SEARCH BAR AT TOP*/
 .search {
     width: 40%;
     display: flex;
@@ -62,6 +63,7 @@
 
 }
 
+/*USER NAV ON TOP RIGHT*/
 .user-nav {
     display: flex;
     align-items: center;
@@ -94,6 +96,7 @@
         fill: var(--color-grey-dark-2);
     }
 
+    /*SMALL NUM INDICATOR ON USER NAV*/
     &__notification {
         font-size: 1rem;
         width: 1.75rem;
@@ -121,6 +124,8 @@
     &__user-name {}
 }
 
+
+/*SIDEBAR NAVIGATION ELEMENTS*/
 .side-nav {
 
     list-style: none;
@@ -130,6 +135,7 @@
     &__item {
         position: relative;
 
+        /*THE PINK OVERLAY ON NAV ELEMENTS*/
         &::before {
             content: "";
             position: absolute;
@@ -185,7 +191,76 @@
     }
 }
 
+
+/*LEGAL TEXT ON SIDEBAR*/
 .legal {
     font-size: 1.2rem;
     color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+}
+
+/*GALLERY ON HOTEL_VIEW*/
+.gallery {
+    display: flex;
+
+    &__item {}
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+/*OVERVIEW*/
+.overview {
+    text-transform: uppercase;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {}
+
+    &__rating {
+        margin-right: auto;
+
+        &-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            fill: var(--color-primary-dark);
+        }
+    }
+
+    &__location {
+        color: var(--color-primary);
+
+        &-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            fill: currentColor;
+        }
+    }
+
+    &__reviews {
+        display: flex;
+
+        &-count {
+            margin-left: 1rem;
+        }
+
+        &-avg {}
+
+    }
+
+}
+
+/*BUTTON*/
+
+.btn-inline {
+    border: none;
+    background-color: transparent;
+    color: currentColor;
+    font-size: 1.6rem;
+
 }

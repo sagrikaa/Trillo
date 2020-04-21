@@ -56,6 +56,7 @@ body {
   height: 3.25rem;
   margin-left: 3rem; }
 
+/*SEARCH BAR AT TOP*/
 .search {
   width: 40%;
   display: flex;
@@ -93,10 +94,12 @@ body {
     width: 2rem;
     fill: var(--color-grey-dark-3); }
 
+/*USER NAV ON TOP RIGHT*/
 .user-nav {
   display: flex;
   align-items: center;
-  align-self: stretch; }
+  align-self: stretch;
+  /*SMALL NUM INDICATOR ON USER NAV*/ }
   .user-nav > * {
     padding: 0 2rem;
     cursor: pointer;
@@ -130,12 +133,14 @@ body {
     border-radius: 50%;
     margin-right: .75rem; }
 
+/*SIDEBAR NAVIGATION ELEMENTS*/
 .side-nav {
   list-style: none;
   font-size: 1.4rem;
   margin-top: 3.5rem; }
   .side-nav__item {
-    position: relative; }
+    position: relative;
+    /*THE PINK OVERLAY ON NAV ELEMENTS*/ }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -170,9 +175,50 @@ body {
     width: 2.75rem;
     fill: currentColor; }
 
+/*LEGAL TEXT ON SIDEBAR*/
 .legal {
   font-size: 1.2rem;
-  color: var(--color-grey-light-4); }
+  color: var(--color-grey-light-4);
+  text-align: center;
+  padding: 2.5rem; }
+
+/*GALLERY ON HOTEL_VIEW*/
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+/*OVERVIEW*/
+.overview {
+  text-transform: uppercase;
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center; }
+  .overview__rating {
+    margin-right: auto; }
+    .overview__rating-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: var(--color-primary-dark); }
+  .overview__location {
+    color: var(--color-primary); }
+    .overview__location-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: currentColor; }
+  .overview__reviews {
+    display: flex; }
+    .overview__reviews-count {
+      margin-left: 1rem; }
+
+/*BUTTON*/
+.btn-inline {
+  border: none;
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1.6rem; }
 
 .container {
   background-color: var(--color-grey-light-2);
@@ -204,5 +250,4 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  background-color: yellow;
   height: 75rem; }
