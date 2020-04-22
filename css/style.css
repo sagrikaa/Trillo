@@ -191,34 +191,72 @@ body {
 
 /*OVERVIEW*/
 .overview {
-  text-transform: uppercase;
   display: flex;
-  padding: 2rem;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2); }
+  .overview__heading {
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    letter-spacing: .1rem;
+    font-weight: 300; }
   .overview__rating {
-    margin-right: auto; }
+    margin-right: auto;
+    display: flex; }
     .overview__rating-icon {
       width: 1.75rem;
       height: 1.75rem;
       fill: var(--color-primary-dark); }
+  .overview__rating-icon, .overview__location-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
   .overview__location {
-    color: var(--color-primary); }
-    .overview__location-icon {
-      width: 1.75rem;
-      height: 1.75rem;
-      fill: currentColor; }
+    margin-right: 2rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center; }
   .overview__reviews {
-    display: flex; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-1);
+    align-self: stretch;
+    padding: 1rem; }
     .overview__reviews-count {
-      margin-left: 1rem; }
+      font-size: 1.6rem; }
+    .overview__reviews-avg {
+      font-size: 2.25rem; }
 
 /*BUTTON*/
 .btn-inline {
   border: none;
   background-color: transparent;
   color: currentColor;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: .2rem .5rem;
+  cursor: pointer;
+  transition: all .2s;
+  border-bottom: 1px solid currentColor; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-inline:focus {
+    animation: pulsate 1s infinite;
+    outline: none; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
 
 .container {
   background-color: var(--color-grey-light-2);
@@ -230,7 +268,7 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
