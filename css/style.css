@@ -265,6 +265,7 @@ body {
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
 
+/*Detail-Description List Items*/
 .list {
   list-style: none;
   margin: 3rem 0;
@@ -294,6 +295,7 @@ body {
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size: cover; } }
 
+/*Detail-Description Recommendation*/
 .recommend {
   font-size: 1.3rem;
   color: var(--color-grey-dark-3);
@@ -309,6 +311,7 @@ body {
     .recommend__photo:not(:last-of-type) {
       margin-right: -1.5rem; }
 
+/*Reviews section*/
 .container {
   background-color: var(--color-grey-light-2);
   max-width: 120rem;
@@ -354,5 +357,4 @@ body {
   padding: 3rem; }
 
 .user-reviews {
-  flex: 1;
-  background-color: lightpink; }
+  flex: 1; }
