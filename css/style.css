@@ -30,6 +30,7 @@ Grey dark 3: #999
   --shadow-light: 0 1rem 2rem rgba(0, 0, 0, .4);
   --line: 1px solid var(--color-grey-light-2); }
 
+/*Sass variables for media queries*/
 * {
   margin: 0;
   padding: 0; }
@@ -42,6 +43,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -141,9 +145,16 @@ body {
   list-style: none;
   font-size: 1.4rem;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin-top: 0; } }
   .side-nav__item {
     position: relative;
     /*THE PINK OVERLAY ON NAV ELEMENTS*/ }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -161,6 +172,9 @@ body {
       background-color: var(--color-primary-dark); }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
   .side-nav__link {
     position: relative; }
     .side-nav__link:visited, .side-nav__link:link {
@@ -172,6 +186,10 @@ body {
       align-items: center;
       position: relative;
       z-index: 10; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__link:visited, .side-nav__link:link {
+          justify-content: center;
+          padding: 2rem; } }
   .side-nav__icon {
     margin-right: 2rem;
     height: 2.75rem;
@@ -184,6 +202,9 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 /*GALLERY ON HOTEL_VIEW*/
 .gallery {
@@ -325,6 +346,10 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      margin-bottom: 3rem;
+      padding: 2rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 5;
@@ -408,6 +433,10 @@ body {
   max-width: 120rem;
   margin: 8rem auto;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%; } }
 
 .header {
   height: 7rem;
@@ -419,8 +448,10 @@ body {
   font-size: 1.4rem; }
 
 .content {
-  display: flex;
-  background-color: var(--color-grey-light-1); }
+  display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   flex: 0 0 18%;
@@ -439,6 +470,9 @@ body {
   display: flex;
   background-color: var(--color-grey-light-1);
   padding: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .details {
+      padding: 3rem; } }
 
 .description {
   flex: 0 0 60%;
@@ -446,6 +480,10 @@ body {
   margin-right: 4.5rem;
   box-shadow: var(--shadow-light);
   padding: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      margin-right: 3rem;
+      padding: 2rem; } }
 
 .user-reviews {
   flex: 1;
